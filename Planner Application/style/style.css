@@ -1,0 +1,405 @@
+/**/
+@media only screen and (max-width: 600px) {
+	html{
+		overflow: scroll;
+	}
+	#primary_column{
+		clear: left;
+		min-width: 100%;
+	}
+	#selected_column{
+		clear: left;
+		min-width: 100%;
+	}
+    .grid_item{
+    	overflow-y: hidden;
+    	width: 100%;
+    }
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	overflow-x: hidden;
+	overflow-y: hidden;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 500;
+	text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.3);
+}
+@font-face {
+	font-family: CODEB;
+	src: url('../fonts/CODE_Bold.otf');
+}
+@font-face {
+	font-family: CODEL;
+	src: url('../fonts/CODE_Light.otf');
+}
+#register{
+	cursor: pointer;
+}
+#register:active{
+	background-color: gray;
+	color:white;
+	box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+.message{
+	font-size: 30px;
+	padding: 10px;
+	color: white;
+	background-color: gray;
+	font-weight: bold;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+h2{
+	margin: auto;
+	padding: 15px;
+	background-color: #39b54a;
+}
+h3,h4{
+	color:black;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.25);
+}
+h4{
+	padding: 10px;
+	font-size: 20px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+h5{
+	font-size: 20px;
+	padding: 5px;
+	color:black;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+	background-color: rgba(0, 0, 0, 0.25);
+}
+.error{
+	padding: 10px;
+	color:white;
+	background-color: gray;
+}
+/*NAVIGATION*/
+nav{
+	z-index: -1;
+	background-color: silver;
+	background-image: url(../images/texture.png);
+	float: left;
+	width: 15%;
+	overflow: hidden;
+	height: 100vh;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	/*min-width: 200px;*/
+}
+nav h2{
+	color:white;
+	font-family: CODEB;
+	font-size: 28px;
+	text-align: center;
+}
+nav ul{
+	color: white;
+	list-style-type: none;
+	text-align: left;
+	font-size: 18px;
+}
+nav ul li{
+	color: white;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+nav a{
+	text-decoration: none;
+}
+nav ul li a{
+	color: white;
+}
+nav ul li a:link, nav ul li a:visited {
+	color:white;
+	display: inline-block;
+}
+nav ul li:hover{
+	background-color: gray;
+}
+nav ul li:active{
+	background-color: gray;
+	box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+nav li img{
+	max-height: 30px;
+	vertical-align: middle;
+}
+.active {
+	background-color: #3ec750;
+	font-weight: bold;
+}
+.logout, .logout:visited{
+	color: white;
+}
+#logout:hover{
+	background-color: gray;
+}
+#logout:active{
+	box-shadow:inset 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+#logout{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	background-color: #3ec750;
+	font-weight: bolder;
+	width: 100%;
+	font-size: 20px;
+	padding: 10px;
+	padding-left: 20px;
+	
+}
+/*PRIMARY COLUMN*/
+#primary_column{
+	z-index: 2;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: lightgray;
+	background-image: url(../images/texture.png);
+	float: left;
+	width: 25%;
+	height: 100vh;
+	/*min-width: 350px;*/
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+#primary_column ul{
+	color: white;
+	list-style-type: none;
+	text-align: left;
+	height: 100%;
+}
+#primary_column ul li{
+	padding: 4%;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06);
+}
+#primary_column a{
+	text-decoration: none;
+}
+#primary_column ul li a:link, #primary_column ul li a:visited {
+	color:white;
+	display: inline-block;
+}
+#primary_column ul li:hover{
+	background-color: gray;
+}
+#primary_column ul li:active{
+	background-color: gray;
+	box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#primary_column .note_tools{
+	float: right;
+	overflow: auto;
+	display: inline-block;
+}
+#primary_column .note_title{
+	max-width: 180px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+#new_note{
+	background-color: #39b54a;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+#primary_column h2{
+	color: black;
+	background-color: #3ec750;
+}
+#primary_column a{
+	color: white;
+	text-decoration: none;
+}
+/*FORM*/
+form{
+	color:black;
+}
+form input{
+	border: none;
+	padding-left: 10px;
+	font-size: 15px;
+	width: 98.7%;
+	height: 50px;
+}
+form input[type=checkbox]{
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+form textarea{
+	border: none;
+	padding: 10px;
+	font-size: 15px;
+	width: 100%;
+	height: 150px;
+}
+form input[type=submit]{
+	display:block;
+	width: 100%;
+	height: 50px;
+	background-color: #46db5a;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 25px;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	outline: none;
+	border: none;
+}
+form input[type=submit]:hover{
+	background-color: gray;
+}
+form input[type=submit]:active{
+	background-color: gray;
+	box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*SELECTED COLUMN*/
+#selected_column{
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: whitesmoke;
+	background-image: url(../images/texture.png);
+	float: left;
+	width: 60%;
+	height: 100vh;
+	color: black;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+#selected_column h2{
+	color: white;
+	background-color: #48e05c;
+}
+#selected_column .note_title{
+	max-width: 180px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	color: black;
+}
+#new_note_white{
+	background-color: #39b54a;
+	color:white;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+}
+#selected_column h3, #selected_column p{
+	padding: 10px;
+}
+#selected_column ul{
+	list-style-type: none;
+	text-align: left;
+}
+#selected_column ul li{
+	padding: 10px;
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06);
+}
+#selected_column .note_tools{
+	float: right;
+	overflow: auto;
+}
+#selected_column a{
+	text-decoration: none;
+	color: black;
+}
+#selected_column ul li a:link, #selected_column ul li a:visited {
+	color:black;
+	display: inline-block;
+}
+#selected_column ul li:hover{
+	color: white;
+	background-color: gray;
+}
+#selected_column ul li:active{
+	background-color: gray;
+	box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/*CALENDAR*/
+table {
+	font-family: CODEB;
+	width: 100%;
+	height: 92%;
+	background-image: url(../images/texture.png);
+	padding: 10px;
+	text-align: center;
+	font-size: 30px;
+}
+td {
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+}
+#today{
+	background-color: #39b54a;
+	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+	color:white;
+}
+#selected{
+	background-color: #b53838;
+	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+	color:white;
+}
+#date_toggle a{
+	font-family: CODEB;
+	color:white;
+	text-decoration: none;
+}
+table a:visited{
+	color: black;
+	text-decoration: none;
+}
+table a{
+	color:black;
+	text-decoration: none;
+	display: block;
+	height: 100%;
+	padding-top: 40%;
+}
+table #today a, table #selected a{
+	color:white;
+	text-decoration: none;
+}
+#day_info{
+	padding:10px;
+	background-color: lightgray;
+	color: black;
+}
+table td:hover{
+	background-color: gray;
+	color: white;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+#edit_calendar_note{
+	background-color: white;
+	list-style-type: none;
+	text-align: center;
+}
+#edit_calendar_note li{
+	background-color: #39b54a;
+	width: 44.4%;
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+	font-weight: bold;
+	padding: 10px;
+}
+#edit_calendar_note li:hover{
+	background-color: gray;
+}
+#edit_calendar_note li:active{
+	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.has_data{
+	background-color: rgba(255, 255, 255, 0.8);
+}
